@@ -97,12 +97,62 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+/* General Styles*/
+
+html {
+  font-size: 16px;
+}
+
+body {
+   font-family: 'Open Sans', sans-serif;
+   font-size: 1em;
+   text-align: left;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+a {
+  color: #e2e3ed;
+  text-decoration: none;
+}
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.875em;
+}
+
+h3, h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.125em;
+  margin: 20px 0;
+}
+
+
+p {
+  font-size: .875em;
+  line-height: 1.285em;
+}
+
+img {
+
+}
+
+figure {
+
+}
+
+address {
+ font-style: normal;
+}
 
 .content-wrapper {
   width: 90%;
   margin: 50px 0;
 }
-/*------------------ Base Header - Footer Syles --------------------*/
+
+/* -------------------- Base Header - Footer Styles -------------------- */
 
 header,
 footer {
@@ -117,11 +167,11 @@ header {
 }
 
 header .content-wrapper {
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  margin: 0;
 }
 
 .header-divider {
@@ -227,9 +277,9 @@ aside {
 /* Reviews */
 
 .reviews {
-   display: flex;
-   justify-content: center;
-   flex-flow: row wrap;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
 }
 
 .reviews h2 {
@@ -239,13 +289,6 @@ aside {
 .reviews h3 {
   width: 55%;
   margin: 20px 0;
-}
-
-/* Footer */
-
-footer .content-wrapper {
-  width: 55%;
-  margin: 50px 0;
 }
 
 /* ==========================================================================
@@ -310,63 +353,63 @@ footer .content-wrapper {
 }
 
 /*
-* Hide only visually, but have it available for screen readers:
-* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
-*
-* 1. For long content, line feeds are not interpreted as spaces and small width
-*    causes content to wrap 1 word per line:
-*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
-*/
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
 
-.sr-only {
+.visuallyhidden {
   border: 0;
-  clip: rect(0, 0, 0, 0);
+  clip: rect(0 0 0 0);
   height: 1px;
   margin: -1px;
   overflow: hidden;
   padding: 0;
   position: absolute;
-  white-space: nowrap;
   width: 1px;
+  white-space: nowrap;
   /* 1 */
 }
 
 /*
-* Extends the .sr-only class to allow the element
-* to be focusable when navigated to via the keyboard:
-* https://www.drupal.org/node/897638
-*/
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
 
-.sr-only.focusable:active,
-.sr-only.focusable:focus {
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
   clip: auto;
   height: auto;
   margin: 0;
   overflow: visible;
   position: static;
-  white-space: inherit;
   width: auto;
+  white-space: inherit;
 }
 
 /*
-* Hide visually and from screen readers, but maintain layout
-*/
+ * Hide visually and from screen readers, but maintain layout
+ */
 
 .invisible {
   visibility: hidden;
 }
 
 /*
-* Clearfix: contain floats
-*
-* For modern browsers
-* 1. The space content is one way to avoid an Opera bug when the
-*    `contenteditable` attribute is included anywhere else in the document.
-*    Otherwise it causes space to appear at the top and bottom of elements
-*    that receive the `clearfix` class.
-* 2. The use of `table` rather than `block` is only necessary if using
-*    `:before` to contain the top-margins of child elements.
-*/
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
 
 .clearfix:before,
 .clearfix:after {
@@ -386,17 +429,18 @@ footer .content-wrapper {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 768px) {
-  /*General styles*/
+@media only screen and (min-width:768px) {
+  /*Tablet styles here*/
+
+  /* General styles */
   .content-wrapper {
     max-width: 640px;
     margin: 100px 0;
   }
 
   /* Header */
-
   header {
-  justify-content: space-around;
+    justify-content: space-around;
   }
 
   header .content-wrapper {
@@ -415,11 +459,9 @@ footer .content-wrapper {
   .header-divider {
     display: none;
   }
-
   /* Hero Area */
 
   /* Aside */
-
   aside .content-wrapper {
     margin: 50px 0;
     display: flex;
@@ -434,13 +476,12 @@ footer .content-wrapper {
   }
 
   /* Features */
-
   .features article {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-flow: column wrap;
-   flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    flex-basis: 50%;
   }
 
   .features .features-item-description {
@@ -448,10 +489,9 @@ footer .content-wrapper {
   }
 
   /* Reviews */
-
   .reviews article {
-   display: flex;
-   justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
   }
 
   .reviews article div {
@@ -459,16 +499,15 @@ footer .content-wrapper {
   }
 
   /* Footer */
-
   footer .content-wrapper {
     width: 65%;
     margin: 100px 0;
   }
 
   .footer-content {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   footer .contact {
@@ -477,115 +516,109 @@ footer .content-wrapper {
 
   footer .copyright {
     width: 100%;
-    display: flex;
-    justify-content: center;
-
   }
 
-/* ==========================================================================
-About Page
-========================================================================== */
-.mission-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  /* ==========================================================================
+   About Page
+   ========================================================================== */
+
+  .mission-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mission-content p {
+    width: 40%;
+  }
+
+  .contact-section .content-wrapper h2 {
+    width: 80%;
+  }
+
+  .contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  /* ==========================================================================
+   FAQ Page
+   ========================================================================== */
+
+  .faq .content-wrapper {
+    justify-content: space-between;
+  }
+
+  .faq-content {
+    flex-basis: 40%;
+  }
+
+  .faq h2 {
+    width: 100%;
+  }
 }
 
-.mission-content p {
-  width: 40%;
-}
-
-.contact-section .content-wrapper h2 {
-  width: 80%;
-}
-
-.contact-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-/* ==========================================================================
- FAQ Page
- ========================================================================== */
-
- .faq .content-wrapper {
-   justify-content: space-between;
- }
-
- .faq-content {
-   flex-basis: 40%;
- }
-
- .faq h2 {
-   width: 100%;
- }
-}
-
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width:1200px) {
   /*Desktop styles here*/
+
+  .content-wrapper {
+    max-width: 960px;
+  }
+
+  /* Hero */
+  .hero-area h1 {
+    width: 60%;
 }
 
-.content-wrapper {
-  max-width: 960px;
-}
+  /* Aside */
+  aside .content-wrapper {
+    justify-content: space-around;
+  }
 
-/* Hero Area */
+  aside .content-wrapper .form-description,
+  aside .content-wrapper .form {
+    width: 30%;
+  }
 
-.hero-area h1 {
-  width: 60%;
-}
+  /* Features */
 
-/* Aside */
+  .features h2 {
+    width: 70%;
+  }
 
-aside .content-wrapper {
-  justify-content: space-around;
-}
-/* Features */
+  .features article {
+    flex-basis: 33%;
+  }
 
-.features h2 {
-  width: 70%;
-}
+  /* Reviews */
+  .reviews article div {
+    width: 42%;
+  }
 
-.features article {
- flex-basis: 33.3%;
-}
+  /* ==========================================================================
+  About Page
+  ========================================================================== */
 
-.features .features-item-description {
-  width: 33.3%;
-}
+  .mission h2,
+  .contact-section .content-wrapper h2 {
+      width: 100%;
+  }
 
-/* Reviews */
+  .contact-section .content-wrapper h2 {
+    margin-bottom: 40px;
+  }
 
-.reviews article div {
-  width: 42%;
-}
+  /* ==========================================================================
+  FAQ Page
+  ========================================================================== */
+  .faq h2 {
+    width: 100%;
+  }
 
-/* ==========================================================================
-About Page
-========================================================================== */
-
-.mission h2,
-.contact-section .content-wrapper h2 {
-  width: 100%;
-}
-
-.contact-section .content-wrapper h2 {
-  margin-bottom: 40px;
-}
-
-
-/* ==========================================================================
- FAQ Page
- ========================================================================== */
-
- .faq h2 {
-   width: 100%;
- }
-
- .faq-content {
-   flex-basis: 35%;
- }
+  .faq-content {
+    flex-basis: 35%;
+  }
 }
 
 /* ==========================================================================
@@ -633,7 +666,7 @@ About Page
   }
   /*
      * Printing Tables:
-     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
      */
   thead {
     display: table-header-group;
