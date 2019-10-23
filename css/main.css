@@ -139,11 +139,11 @@ p {
 }
 
 img {
-
+  width: 100%;
 }
 
 figure {
-
+  margin: 0;
 }
 
 address {
@@ -172,6 +172,14 @@ header {
 
 header .content-wrapper {
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+header figure {
+  width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -327,6 +335,13 @@ input[type=button] {
   background-color: #2a423a;
   display: flex;
   justify-content: center;
+  flex-flow: row wrap;
+}
+
+.reviews figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-flow: row wrap;
 }
 
@@ -511,8 +526,12 @@ input[type=button] {
     justify-content: space-between;
   }
 
+  header figure {
+    width: 30%;
+  }
+
   header nav {
-    width: 20%;
+    width: 25%;
   }
 
   header nav ul {
@@ -553,11 +572,13 @@ input[type=button] {
   }
 
   /* Reviews */
+
   .reviews article {
     display: flex;
     justify-content: space-between;
   }
 
+  .reviews figure,
   .reviews article div {
     width: 49%;
   }
