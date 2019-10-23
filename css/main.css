@@ -243,7 +243,8 @@ footer .copyright {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
-  background: url('../img/hero.png');
+  background: url('../img/hero.png') center no-repeat #333;
+  background-size: cover;
 }
 
 .hero-area h1 {
@@ -296,7 +297,8 @@ input[type=button] {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
-  background: url('../img/features.png')
+  background: url('../img/features.png') center no-repeat #333;
+  background-size: cover;
 }
 
 .features h2 {
